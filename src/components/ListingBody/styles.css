@@ -1,0 +1,5 @@
+.dsf-cardlisting-container {
+    background-color: var(--dsf-color-bg-secondary);
+    padding: 20px 20px 10px 20px;
+    border-radius: 5px;
+}

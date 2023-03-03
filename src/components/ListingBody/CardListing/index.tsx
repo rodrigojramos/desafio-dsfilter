@@ -1,16 +1,15 @@
-import './styles.css';
-import * as productService from '../../../services/product-service';
-import CardProduct from '../../CardProduct';
+import "./styles.css";
+import { ProductDTO } from "../../../models/product";
 
-export default function CardListing() {
+type Props = {
+  product?: ProductDTO;
+};
 
-    return(
-        <section>
-            <div className="dsf-container dsf-cardlisting-container dsf-mb20">
-                {
-                    productService.findByPrice(0, Number.MAX_VALUE).map(product => <CardProduct key={product.id} product={product} />)
-                }
-            </div>
-        </section>
-    )
+export default function CardListing({ product }: Props) {
+  return (
+    <div className="dsf-product-description">
+      <p>{product?.name}</p>
+      <h3>R$ {product?.price.toFixed(2)}</h3>
+    </div>
+  );
 }

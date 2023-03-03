@@ -1,5 +1,19 @@
-.dsf-cardlisting-container {
-    background-color: var(--dsf-color-bg-secondary);
-    padding: 20px 20px 10px 20px;
+.dsf-product-description {
+    width: 920px;
+    height: 53px;
     border-radius: 5px;
+    border: 1px solid var( --dsf-color-border);
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dsf-product-description h3 {
+    color: var(--dsf-color-font-secondary);
+    font-size: 16px;
+}
+
+.dsf-product-description p {
+    color: var(--dsf-color-font-tertiary);
+    font-size: 12px;
 }
