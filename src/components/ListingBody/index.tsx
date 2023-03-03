@@ -1,9 +1,10 @@
 import './styles.css';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProductDTO } from "../../models/product";
 import CardFilter from "./CardFilter";
 import CardListing from "./CardListing";
 import * as productService  from '../../services/product-service';
+import { ContextProductsCount } from '../../utils/context-products';
 
 type MinMax = {
     min: number;
@@ -14,6 +15,8 @@ export default function ListingBody() {
 
     const [product, setProduct] = useState<ProductDTO[]>([]);
 
+    const {setContextProductsCount} = useContext(ContextProductsCount)
+
     const [filterMinMax, setFilterMinMax] = useState<MinMax>({
         min: 0,
         max: Number.MAX_VALUE
@@ -21,6 +24,7 @@ export default function ListingBody() {
 
     useEffect(() => {
         setProduct(productService.findByPrice(filterMinMax.min, filterMinMax.max));
+        setContextProductsCount((productService.findByPrice(filterMinMax.min, filterMinMax.max)).length)
     }, [filterMinMax]);
 
     function handleMinMax(min: number, max: number) {
