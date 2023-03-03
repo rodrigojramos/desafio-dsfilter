@@ -1,0 +1,36 @@
+.dsf-cardfilter-container {
+    background-color: var(--dsf-color-bg-secondary);
+    height: 200px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.dsf-input input {
+    width: 200px;
+    height: 40px;
+    color: var(--dsf-color-input);
+    border: 1px solid var(--dsf-color-input);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.dsf-input input:focus {
+    outline: none;
+}
+
+.dsf-input input::placeholder {
+    color: var(--dsf-color-input);
+}
+
+.dsf-button button {
+    width: 200px;
+    height: 40px;
+    background-color: var(--dsc-color-bg-tertiary);
+    color: var(--dsf-color-font-primary);
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+}

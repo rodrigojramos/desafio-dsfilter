@@ -8,6 +8,10 @@
   --dsf-color-font-primary: #FFF;
   --dsf-color-font-secondary: #55BC04;
   --dsf-color-font-tertiary: #6F6F6F;
+
+  --dsf-color-input: #C2C2C2;
+
+  --dsf-color-border: #55BC04;
 }
 
 * {
