@@ -1,34 +1,15 @@
 import './styles.css';
+import * as productService from '../../../services/product-service';
+import CardProduct from '../../CardProduct';
 
 export default function CardListing() {
 
     return(
         <section>
             <div className="dsf-container dsf-cardlisting-container dsf-mb20">
-                <div className="dsf-product-description">
-                    <p>PC Gamer Pro</p>
-                    <h3>R$ 1200.00</h3>
-                </div>
-                <div className="dsf-product-description">
-                    <p>PC Gamer Pro</p>
-                    <h3>R$ 1200.00</h3>
-                </div>
-                <div className="dsf-product-description">
-                    <p>PC Gamer Pro</p>
-                    <h3>R$ 1200.00</h3>
-                </div>
-                <div className="dsf-product-description">
-                    <p>PC Gamer Pro</p>
-                    <h3>R$ 1200.00</h3>
-                </div>
-                <div className="dsf-product-description">
-                    <p>PC Gamer Pro</p>
-                    <h3>R$ 1200.00</h3>
-                </div>
-                <div className="dsf-product-description">
-                    <p>PC Gamer Pro</p>
-                    <h3>R$ 1200.00</h3>
-                </div>
+                {
+                    productService.findByPrice(0, Number.MAX_VALUE).map(product => <CardProduct key={product.id} product={product} />)
+                }
             </div>
         </section>
     )
