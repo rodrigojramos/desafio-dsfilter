@@ -1,0 +1,23 @@
+.dsf-header-container {
+    background-color: var(--dsc-color-bg-tertiary);
+    color: var(--dsf-color-font-primary);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.dsf-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dsf-navbar h1 {
+    color: var(--dsf-color-font-primary);
+    font-size: 20px;
+}
+
+.dsf-navbar p {
+    color: var(--dsf-color-font-primary);
+    font-size: 12px;
+}
